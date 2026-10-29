@@ -1,1 +1,1 @@
-<img src="{{ asset('images/vegas.png') }}" alt="VegasHotel" {{ $attributes }}>
+<img src="{{ asset('images/seasons/logo/vegas.png') }}" alt="VegasHotel" {{ $attributes }}>

@@ -1,3 +1,3 @@
 <a href="/">
-    <img src="{{ asset('public/images/vegas.png') }}" alt="VegasHotel" class="h-20 w-auto">
+    <img src="{{ asset('images/seasons/logo/vegas.png') }}" alt="VegasHotel" class="h-20 w-auto">
 </a>
