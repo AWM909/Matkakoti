@@ -26,7 +26,7 @@
     <nav class="bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center gap-x-6 gap-y-2">
             <a href="{{ route('home') }}" class="flex items-center gap-2 font-semibold text-gray-900">
-                <x-application-mark class="block h-8 w-auto" />
+                <x-application-mark class="block h-10 w-auto" />
                 <span>Matkakoti</span>
             </a>
 
