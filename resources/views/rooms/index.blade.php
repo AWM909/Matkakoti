@@ -1,15 +1,17 @@
 <x-site-layout title="Majoitushuoneet">
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-0">
         @forelse ($rooms as $room)
+            @php
+                $fallback = $room->private_toilet
+                    ? 'images/seasons/room123.jpg'
+                    : 'images/seasons/room321.jpg';
+            @endphp
+
             <div class="bg-white rounded-lg shadow overflow-hidden">
-                @if ($room->image)
-                    <img src="{{ asset('storage/' . $room->image) }}" alt="{{ $room->name }}"
-                         class="w-full h-48 object-cover">
-                @else
-                    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
-                        Kuva puuttuu
-                    </div>
-                @endif
+                <img src="{{ $room->image ? asset('storage/' . $room->image) : asset($fallback) }}"
+                     alt="{{ $room->name }}"
+                     class="w-full h-48 object-cover">
+
                 <div class="p-4">
                     <h2 class="font-semibold text-gray-900">Huone {{ $room->number }} · {{ $room->name }}</h2>
                     <p class="text-sm text-gray-600 my-2">{{ $room->description }}</p>
